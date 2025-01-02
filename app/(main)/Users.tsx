@@ -72,7 +72,8 @@ const columns = [
   }),
 
   columnHelper.accessor("company", {
-    cell: (info) => info.getValue().name,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    cell: (info: any) => info.getValue().name,
     header: () => <p>Company</p>,
 
     enableColumnFilter: false,
