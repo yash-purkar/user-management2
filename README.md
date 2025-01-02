@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# User Management App
 
-## Getting Started
+This project demonstrates a simple user management system built with **Next.js**, **Shadcn**, **TanStack Query**, and **TanStack Table**. The application fetches user data from a public API, displays it in a table, and provides features like sorting, filtering, search, and pagination.
 
-First, run the development server:
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Styling**: [Shadcn](https://github.com/shadcn/ui)
+- **Data Fetching**: [TanStack Query](https://tanstack.com/query)
+- **Table Management**: [TanStack Table](https://tanstack.com/table)
+
+## 🌍 Features
+
+1. **Data Fetching**:
+
+   - Fetches user data from [JSONPlaceholder API](https://jsonplaceholder.typicode.com/users).
+   - Uses **TanStack Query** to manage fetching, caching, and synchronization of data.
+
+2. **Table Features**:
+
+   - **Sorting**: Sort the data by any column (Name, Email, etc.).
+   - **Filtering**: Filter rows based on column values (e.g., filter users by name or email).
+   - **Search**: Global search bar that filters data across all columns.
+   - **Pagination**: Implements pagination using **TanStack Table**..
+
+3. **UI/UX**:
+   - Clean design using **Shadcn** components.
+   - Handles loading states and displays error messages if the data fetch fails.
+
+## 🚀 Getting Started
+
+Follow these steps to get the project running locally:
+
+### 1. Clone the Repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yash-purkar/user-management2.git
+cd user-management2
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bast
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. Run the Development Server
 
-## Learn More
+```bast
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Visit http://localhost:3000 to see the app in action.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 Approach & Challenges
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Approach:**
 
-## Deploy on Vercel
+- The project was developed using Next.js to create a server-rendered React application.
+- TanStack Query was utilized for efficient data fetching, caching, and state management.
+- I used TanStack Table for handling table-related operations such as sorting, filtering, and pagination, without the need for dynamic routing.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Challenges:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Implementing pagination with TanStack Table was a bit tricky but allowed for efficient navigation without the need for dynamic routes.
