@@ -25,7 +25,6 @@ import {
   ChevronRight,
   ChevronsLeft,
   ChevronsRight,
-  Search,
 } from "lucide-react";
 
 import { useDebounce } from "../customHooks/useDebounce";
